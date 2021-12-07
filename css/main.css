@@ -1,4 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
+  font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -21,80 +27,13 @@ a:hover, a:active, a:focus {
 }
 
 .wrapper {
-  width: 1280px;
+  width: 1400px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
 }
 
 .landing-page {
-  height: 574px;
-}
-
-/**
- * Basic typography style for copy text
- */
-body {
-  color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-/**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1180px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */
-}
-
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
-/**
- * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  height: 100vh;
 }
 
 .nav {
@@ -108,10 +47,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 50px;
+  height: 7vh;
   background: #4e4e4e;
-  font-family: Roboto;
-  font-size: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
   z-index: 1;
 }
 
@@ -136,20 +75,12 @@ body {
 
 .header {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
+  height: 93vh;
   background-image: url(https://i.picsum.photos/id/1059/7360/4912.jpg?hmac=vVWk1qyiXN_VgPhpNqFm3yl2HUPW6fHqYOjTHYO2bHQ);
   background-size: cover;
   background-position: center;
   color: #fff;
+  z-index: 1;
 }
 
 .header__shadow {
@@ -157,34 +88,38 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 .header__wrapper {
-  margin-right: 40%;
-  margin-bottom: 5%;
-  z-index: 1;
+  position: absolute;
+  top: 30%;
+  left: 15%;
 }
 
 .header__heading {
   margin: 0;
   padding: 0;
+  font-size: 4rem;
   font-weight: 700;
 }
 
 .header__text {
-  margin: 30px 0;
+  margin: 50px 0;
+  font-size: 2rem;
 }
 
 .header__btn {
+  position: absolute;
   padding: 10px 60px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   background: none;
   border: 3px solid #fff;
   color: #fff;
   -webkit-transition: 1s linear;
   transition: 1s linear;
+  cursor: pointer;
 }
 
 .header__btn:hover {
