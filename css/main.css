@@ -126,4 +126,66 @@ a:hover, a:active, a:focus {
   background-color: #fff;
   color: #000;
 }
+
+.about-us {
+  padding: 50px 200px;
+  height: 100vh;
+}
+
+.about-us__heading {
+  margin-bottom: 30px;
+  font-size: 4rem;
+}
+
+.about-us__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.about-us__branch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-us__branch:nth-child(1) .about-us__image {
+  background-image: url("../images/adult.jpg");
+}
+
+.about-us__image {
+  width: 15%;
+  height: 15%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.about-us__person {
+  width: 75%;
+}
+
+.about-us__person-heading {
+  font-size: 2rem;
+}
+
+.about-us__text {
+  margin-top: 30px;
+  padding-right: 30px;
+  font-size: 1.6rem;
+}
 /*# sourceMappingURL=main.css.map */
