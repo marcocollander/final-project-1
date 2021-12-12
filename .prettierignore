@@ -3,6 +3,6 @@ build
 coverage
 
 # Ignore all files:
-*.html
-*.css
-*.scss
+#*.html
+#*.css
+#*.scss
