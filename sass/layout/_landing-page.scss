@@ -1,0 +1,9 @@
+@import 'navigation';
+@import 'header';
+
+.landing-page {
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: $text-font;
+}

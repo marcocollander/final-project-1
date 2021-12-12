@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  position: relative;
+  //width: 1280px;
+  height: 93vh;
+  padding-bottom: 50px;
+  background-image: url(https://i.picsum.photos/id/1059/7360/4912.jpg?hmac=vVWk1qyiXN_VgPhpNqFm3yl2HUPW6fHqYOjTHYO2bHQ);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #fff;
+  z-index: 1;
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 960px;
+    height: 97vh;
+    margin: 0 auto 500px;
+
+  }
+
+  &__heading {
+    margin: 0;
+    padding: 0;
+    font-size: 3.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    @include text($dark);
+  }
+
+  &__text {
+    margin: 50px 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px $dark;
+  }
+
+  &__btn {
+    width: 200px;
+    padding: 10px 60px;
+    border: 3px solid #fff;
+    background: none;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 1s linear;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

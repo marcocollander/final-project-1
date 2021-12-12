@@ -1,0 +1,132 @@
+// style śrotkowej  części strony głównej
+// the styles of the center section of the home page
+
+.about-us {
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__heading {
+    margin-bottom: 30px;
+    font-size: 3.6rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__branch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &:nth-child(1) {
+      .about-us__image {
+        background-image: url('../images/girl.jpg');
+      }
+    }
+
+    &:nth-child(2) {
+      .about-us__person-heading {
+        text-align: right;
+      }
+
+      .about-us__image {
+        background-image: url('../images/hoody.jpg');
+        order: 2;
+      }
+    }
+
+
+    &:nth-child(3) {
+      .about-us__image {
+        background-image: url('../images/adult.jpg');
+      }
+    }
+
+    &:nth-child(4) {
+      .about-us__person-heading {
+        text-align: right;
+      }
+
+      .about-us__image {
+        background-image: url('../images/man.jpg');
+        order: 2;
+      }
+    }
+
+  }
+
+  &__image {
+    width: 15%;
+    height: 15%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+  }
+
+  &__person {
+    width: 75%;
+
+    &-heading {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    margin-top: 30px;
+    font-size: 1.6rem;
+  }
+}
+
+.offer {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 50px 0;
+  background-color: #405D78;
+  color: $text-color-light;
+  font-size: 3.6rem;
+
+  &__wrapper {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  &__heading {
+    margin-top: 30px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 900px;
+    height: 80vh;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  &__item {
+    width: 10vw;
+    height: 10vw;
+    margin: 30px;
+    background-color: #fff;
+    transition: .3s;
+  }
+
+  &__item:hover {
+    transform: scale(1.1);
+    border: 3px solid orange;
+  }
+
+}

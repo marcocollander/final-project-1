@@ -1,0 +1,11 @@
+// 1. Configuration and helpers
+@import 'utils/reset', 'utils/variables', 'utils/mixins';
+
+// 3. Base stuff
+@import 'base/base', 'base/helpers', 'base/typography';
+
+// 4. Layout-related sections
+@import 'layout/_landing-page.scss', 'layout/middle-part', 'layout/footer';
+
+// 5. Components
+@import 'components/button';
