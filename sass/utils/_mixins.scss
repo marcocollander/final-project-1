@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
-
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -10,29 +6,21 @@
   @if $self {
     &,
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       @content;
     }
 
   } @else {
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       @content;
     }
   }
 }
 
-/// Text shadow
+/// Type text
 /// @author Zenon Marek Raubuć
-/// @param {} $var {}
-
-@mixin text($offset-x:5px, $offset-y:5px, $blur-radius:5px, $color: $dark) {
-  text-shadow: $offset-x $offset-y $blur-radius $color;
-  //@content
-}
-
+// @param{dimension, dimension, color} $size $weight $color
 @mixin type-text($size, $weight,  $color) {
   font-size: $size;
   font-weight: $weight;
@@ -40,13 +28,13 @@
   @content;
 }
 
+/// Make a view and content in terminate frame
+/// @author Zenon Marek Raubuć
+/// @param {dimension} $max-width, $width
 
-/// Make a context based selector a little more friendly
-/// @author Kitty Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
+@mixin wrapper($max-width) {
+  max-width: $max-width;
+  margin: 0 auto;
+  @content;
 }
 

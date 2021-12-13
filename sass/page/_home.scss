@@ -1,12 +1,16 @@
-// style śrotkowej  części strony głównej
-// the styles of the center section of the home page
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// The styles of the center section of the home page
+// -----------------------------------------------------------------------------
 
+
+// Style for section about us
 .about-us {
   height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
 
   &__heading {
+    margin-top: 50px;
     margin-bottom: 30px;
     font-size: 3.6rem;
   }
@@ -83,25 +87,21 @@
   }
 }
 
+// Style for section offer
 .offer {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
+  @include wrapper(1920px);
   height: 100vh;
   padding: 50px 0;
   background-color: #405D78;
   color: $text-color-light;
-  font-size: 3.6rem;
-
-  &__wrapper {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-
-  }
 
   &__heading {
     margin-top: 30px;
+    font-size: 3.6rem;
+  }
+
+  &__wrapper {
+    @include wrapper(960px);
   }
 
   &__container {
@@ -109,24 +109,48 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    max-width: 900px;
     height: 80vh;
-    margin: 0 auto;
-    width: 100%;
     padding-bottom: 50px;
   }
 
   &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10vw;
     height: 10vw;
     margin: 30px;
     background-color: #fff;
-    transition: .3s;
-  }
+    transition: transform .5s linear;
 
-  &__item:hover {
-    transform: scale(1.1);
-    border: 3px solid orange;
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:first-child {
+      position: relative;
+      text-align: center;
+
+      .item-new-symbol {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 25px;
+        height: 25px;
+        background-color: $brand-color;
+        border-radius: 50%;
+      }
+    }
+
+    &-heading {
+      font-size: 2.4rem;
+      color: $text-color;
+
+      &-new {
+        color: $text-color;
+        font-size: 1.8rem;
+      }
+    }
   }
 
 }

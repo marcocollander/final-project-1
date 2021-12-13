@@ -1,8 +1,10 @@
 .nav {
   background: #4e4e4e;
   position: fixed;
-  max-width: 1920px;
-  width: 100%;
+  @include wrapper(1920px) {
+    width: 100%;
+  }
+
   z-index: 2;
 
   &__wrapper {
@@ -10,10 +12,8 @@
     justify-content: space-between;
     align-items: center;
     height: 7vh;
-    margin: 0 auto;
-    max-width: 960px;
+    @include wrapper(960px);
     font-size: 2rem;
-
   }
 
   &__link {
@@ -39,6 +39,7 @@
       }
 
       &:last-child {
+        color: currentColor;
         cursor: not-allowed;
       }
     }

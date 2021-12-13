@@ -1,12 +1,5 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
-
 .footer {
-  max-width: 1400px;
-  width: 100%;
-
-  margin: 0 auto;
+  @include wrapper(1920px);
   background-color: #4e4e4e;
   color: $text-color-light;
 

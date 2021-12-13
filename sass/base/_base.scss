@@ -22,12 +22,8 @@ html {
   box-sizing: inherit;
 }
 
-//
-// Background whole page
-//
-body {
-  color: $text-font;
-
+html {
+  scroll-behavior: smooth;
 }
 
 //
@@ -41,15 +37,4 @@ a {
     color: $text-color;
   }
 }
-
-//
-//
-//
-//.wrapper {
-//  width: 960px;
-//  margin: 0 auto;
-//  font-family: 'Roboto', sans-serif;
-//}
-
-//
 

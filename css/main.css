@@ -13,48 +13,35 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  color: "Roboto", sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
 a {
   color: #e50050;
   text-decoration: none;
 }
-a:hover, a:active, a:focus {
+a:hover, a:active {
   color: #222222;
 }
 
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
 .container {
   max-width: 960px;
-  /* 1 */
   width: 100%;
-  /* 1 */
   margin-left: auto;
-  /* 2 */
   margin-right: auto;
-  /* 2 */
 }
 
-/**
- * Basic typography style for copy text
- */
 body {
-  font-family: "Roboto", sans-serif;
   color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 125%/1.4 "Roboto", sans-serif;
 }
 
 .nav {
   background: #4e4e4e;
   position: fixed;
   max-width: 1920px;
+  margin: 0 auto;
   width: 100%;
   z-index: 2;
 }
@@ -63,8 +50,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 7vh;
-  margin: 0 auto;
   max-width: 960px;
+  margin: 0 auto;
   font-size: 2rem;
 }
 .nav__link {
@@ -86,14 +73,15 @@ body {
   margin-right: 50px;
 }
 .nav__links-item:last-child {
+  color: currentColor;
   cursor: not-allowed;
 }
 
 .header {
   position: relative;
-  height: 93vh;
+  height: 100vh;
   padding-bottom: 50px;
-  background-image: url(https://i.picsum.photos/id/1059/7360/4912.jpg?hmac=vVWk1qyiXN_VgPhpNqFm3yl2HUPW6fHqYOjTHYO2bHQ);
+  background-image: url("../images/entrepreneur.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -112,9 +100,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
   max-width: 960px;
-  height: 97vh;
-  margin: 0 auto 500px;
+  margin: 0 auto;
 }
 .header__heading {
   margin: 0;
@@ -122,7 +110,7 @@ body {
   font-size: 3.6rem;
   font-weight: 500;
   letter-spacing: 2px;
-  text-shadow: black 5px 5px black;
+  text-shadow: 5px 5px 5px #000;
 }
 .header__text {
   margin: 50px 0;
@@ -147,20 +135,29 @@ body {
   background-color: #fff;
   color: #000;
 }
+.header__image-author {
+  margin-top: -2%;
+  color: #fff;
+}
+.header__link-to-author {
+  margin: 0 5px;
+  color: #fff;
+}
+.header__link-to-author:hover {
+  color: aquamarine;
+}
 
 .landing-page {
   max-width: 1920px;
-  height: 100vh;
   margin: 0 auto;
-  font-family: "Roboto", sans-serif;
 }
 
 .about-us {
   height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 .about-us__heading {
+  margin-top: 50px;
   margin-bottom: 30px;
   font-size: 3.6rem;
 }
@@ -215,49 +212,66 @@ body {
 }
 
 .offer {
-  max-width: 1400px;
-  width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
   height: 100vh;
   padding: 50px 0;
   background-color: #405D78;
   color: #fff;
+}
+.offer__heading {
+  margin-top: 30px;
   font-size: 3.6rem;
 }
 .offer__wrapper {
   max-width: 960px;
-  width: 100%;
   margin: 0 auto;
-}
-.offer__heading {
-  margin-top: 30px;
 }
 .offer__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-  max-width: 900px;
   height: 80vh;
-  margin: 0 auto;
-  width: 100%;
   padding-bottom: 50px;
 }
 .offer__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10vw;
   height: 10vw;
   margin: 30px;
   background-color: #fff;
-  transition: 0.3s;
+  transition: transform 0.5s linear;
 }
 .offer__item:hover {
-  transform: scale(1.1);
-  border: 3px solid orange;
+  transform: scale(1.05);
+}
+.offer__item:first-child {
+  position: relative;
+  text-align: center;
+}
+.offer__item:first-child .item-new-symbol {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 25px;
+  height: 25px;
+  background-color: #e50050;
+  border-radius: 50%;
+}
+.offer__item-heading {
+  font-size: 2.4rem;
+  color: #222222;
+}
+.offer__item-heading-new {
+  color: #222222;
+  font-size: 1.8rem;
 }
 
 .footer {
-  max-width: 1400px;
-  width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
   background-color: #4e4e4e;
   color: #fff;
