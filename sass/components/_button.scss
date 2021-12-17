@@ -1,3 +1,18 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+.header__btn {
+  width: 200px;
+  padding: 10px 60px;
+  border: 3px solid #fff;
+  background: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $brand-color;
+  letter-spacing: 1px;
+  transition: 1s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}

@@ -2,6 +2,7 @@
   @include wrapper(1920px);
   background-color: #4e4e4e;
   color: $text-color-light;
+  padding: 0 10px;
 
   &__wrapper {
     display: flex;
