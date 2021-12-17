@@ -1,24 +1,17 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
+:root {
   font-size: 62.5%;
-  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
-
-html {
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 a {
-  color: #e50050;
+  color: #e91e13;
   text-decoration: none;
 }
 a:hover, a:active {
@@ -30,11 +23,6 @@ a:hover, a:active {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-
-body {
-  color: #222222;
-  font: normal 125%/1.4 "Roboto", sans-serif;
 }
 
 .nav {
@@ -80,7 +68,6 @@ body {
 .header {
   position: relative;
   height: 100vh;
-  padding-bottom: 50px;
   background-image: url("../images/entrepreneur.jpg");
   background-size: cover;
   background-position: center center;
@@ -118,26 +105,14 @@ body {
   letter-spacing: 1px;
   text-shadow: 2px 2px 2px black;
 }
-.header__btn {
-  width: 200px;
-  padding: 10px 60px;
-  border: 3px solid #fff;
-  background: none;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: 1px;
-  transition: 1s linear;
-  cursor: pointer;
-}
-.header__btn:hover {
-  background-color: #fff;
-  color: #000;
-}
 .header__image-author {
-  margin-top: -2%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: -30px;
   color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 .header__link-to-author {
   margin: 0 5px;
@@ -147,17 +122,11 @@ body {
   color: aquamarine;
 }
 
-.landing-page {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
 .about-us {
-  height: 100vh;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 .about-us__heading {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 30px;
   font-size: 3.6rem;
 }
@@ -165,6 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-top: 30px;
 }
 .about-us__branch {
   display: flex;
@@ -193,8 +163,7 @@ body {
   order: 2;
 }
 .about-us__image {
-  width: 15%;
-  height: 15%;
+  width: 20%;
   aspect-ratio: 1/1;
   background-size: cover;
   background-position: center center;
@@ -205,42 +174,42 @@ body {
 }
 .about-us__person-heading {
   font-size: 2rem;
+  font-weight: 700;
 }
 .about-us__text {
   margin-top: 30px;
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .offer {
   max-width: 1920px;
   margin: 0 auto;
-  height: 100vh;
-  padding: 50px 0;
-  background-color: #405D78;
+  padding: 40px 0;
+  background-color: #405d78;
   color: #fff;
-}
-.offer__heading {
-  margin-top: 30px;
-  font-size: 3.6rem;
 }
 .offer__wrapper {
   max-width: 960px;
   margin: 0 auto;
+}
+.offer__heading {
+  margin-bottom: 30px;
+  font-size: 3.6rem;
 }
 .offer__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-  height: 80vh;
   padding-bottom: 50px;
 }
 .offer__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
-  height: 10vw;
+  width: 20%;
+  aspect-ratio: 1/1;
   margin: 30px;
   background-color: #fff;
   transition: transform 0.5s linear;
@@ -256,9 +225,9 @@ body {
   position: absolute;
   top: -10px;
   left: -10px;
-  width: 25px;
-  height: 25px;
-  background-color: #e50050;
+  width: 20px;
+  height: 20px;
+  background-color: #e91e13;
   border-radius: 50%;
 }
 .offer__item-heading {

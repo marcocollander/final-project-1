@@ -1,0 +1,27 @@
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: $text-font;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

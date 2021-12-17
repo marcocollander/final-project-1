@@ -1,16 +1,8 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// The styles of the center section of the home page
-// -----------------------------------------------------------------------------
-
-
-// Style for section about us
 .about-us {
-  height: 100vh;
-  padding: 50px 0;
+  padding: 40px 0;
 
   &__heading {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     font-size: 3.6rem;
   }
@@ -19,6 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-top: 30px;
   }
 
   &__branch {
@@ -44,7 +37,6 @@
       }
     }
 
-
     &:nth-child(3) {
       .about-us__image {
         background-image: url('../images/adult.jpg');
@@ -61,12 +53,10 @@
         order: 2;
       }
     }
-
   }
 
   &__image {
-    width: 15%;
-    height: 15%;
+    width: 20%;
     aspect-ratio: 1/1;
     background-size: cover;
     background-position: center center;
@@ -78,30 +68,30 @@
 
     &-heading {
       font-size: 2rem;
+      font-weight: 700;
     }
   }
 
   &__text {
     margin-top: 30px;
     font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
 
-// Style for section offer
 .offer {
   @include wrapper(1920px);
-  height: 100vh;
-  padding: 50px 0;
-  background-color: #405D78;
+  padding: 40px 0;
+  background-color: #405d78;
   color: $text-color-light;
-
-  &__heading {
-    margin-top: 30px;
-    font-size: 3.6rem;
-  }
 
   &__wrapper {
     @include wrapper(960px);
+  }
+
+  &__heading {
+    margin-bottom: 30px;
+    font-size: 3.6rem;
   }
 
   &__container {
@@ -109,7 +99,6 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    height: 80vh;
     padding-bottom: 50px;
   }
 
@@ -117,11 +106,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
-    height: 10vw;
+    width: 20%;
+    aspect-ratio: 1 / 1;
     margin: 30px;
     background-color: #fff;
-    transition: transform .5s linear;
+    transition: transform 0.5s linear;
 
     &:hover {
       transform: scale(1.05);
@@ -135,8 +124,8 @@
         position: absolute;
         top: -10px;
         left: -10px;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         background-color: $brand-color;
         border-radius: 50%;
       }
@@ -152,5 +141,4 @@
       }
     }
   }
-
 }
